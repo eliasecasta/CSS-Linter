@@ -3,10 +3,10 @@ class FileLoader
 
   def initialize(file_path)
     @file_path = file_path
-    @file = opener(@file_path)
+    @file = reader(@file_path)
   end
 
-  def opener(file_path)
-    file = File.read(file_path)
+  def reader(file_path)
+    file = File.read(file_path).split
   end
 end
