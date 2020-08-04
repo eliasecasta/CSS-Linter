@@ -1,5 +1,4 @@
 require 'strscan'
-
 require 'awesome_print'
 
 module LinterRules
@@ -27,6 +26,8 @@ module LinterRules
       elsif v == ';'
         err_arr << err_msg(1, line_counter, v, 'bf') if arr[i - 1] == ' ' && v == ';'
         err_arr << err_msg(0, line_counter, v, 'af', 'nl') if arr[i + 1] != "\n" && v == ';'
+      elsif v == ','
+        err_arr << err_msg(0, line_counter, v, 'af', 'spc') if arr[i + 1] != ' ' && v == ','
       end
     end
 

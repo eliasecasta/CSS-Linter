@@ -9,15 +9,5 @@ class FileLoader
   def reader(file_path)
     read_file = File.read(file_path)
     content = StringScanner.new(read_file)
-    # p content.eos
-    # p content.scan(r'\w+')
-    # File.open(file_path, 'r') do |file|
-    #   scanner= StringScanner.new(file.readline)
-    #   until file.eof?
-    #     scanner.scan(/}/)
-    #     scanner << file.readline
-    #   end
-    #   scanner
-    # end
   end
 end
