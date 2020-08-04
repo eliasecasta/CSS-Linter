@@ -118,14 +118,14 @@ the errors found.
 
 **Examples**
 
-  [0] "On line 1 missing space before '{' opening curly bracket",
-  [1] "On line 1 missing newline after '{' opening curly bracket",
-  [2] "On line 2 a(n) '(' opening parentheses should not have space(s) surrounding it",
-  [3] "On line 2 a(n) ')' closing parentheses should not have space(s) surrounding it",
-  [4] "On line 5 missing newline after '}' closing curly bracket",
-  [5] "On line 7 missing space after ':' colon",
-  [6] "On line 8 missing newline after ';' semi-colon",
-  [7] "On line 17 missing newline after '}' closing curly bracket"
+- [0] "On line 1 missing space before '{' opening curly bracket",
+- [1] "On line 1 missing newline after '{' opening curly bracket",
+- [2] "On line 2 a(n) '(' opening parentheses should not have space(s) surrounding it",
+- [3] "On line 2 a(n) ')' closing parentheses should not have space(s) surrounding it",
+- [4] "On line 5 missing newline after '}' closing curly bracket",
+- [5] "On line 7 missing space after ':' colon",
+- [6] "On line 8 missing newline after ';' semi-colon",
+- [7] "On line 17 missing newline after '}' closing curly bracket"
 
 To test out **CSS Linter** you need to:
 * have **Ruby** installed on your computer
