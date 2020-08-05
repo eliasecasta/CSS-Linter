@@ -1,0 +1,14 @@
+GEM
+  specs:
+    awesome_print (1.8.0)
+    strscan (1.0.3)
+
+PLATFORMS
+  x64-mingw32
+
+DEPENDENCIES
+  awesome_print
+  strscan
+
+BUNDLED WITH
+   2.1.4
