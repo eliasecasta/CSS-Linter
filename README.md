@@ -164,7 +164,7 @@ This project was built using these technologies.
 
 ## Video Presentation
 
-Check out full presentation [here](https://www.loom.com)
+Check out full presentation [here](https://www.loom.com/share/a1e55d78be5e403dbcaa80cee442394d)
 
 ## Potential future features
 - Add more advanced linting rules
