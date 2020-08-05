@@ -1,20 +1,20 @@
+# rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
 require 'strscan'
 require 'awesome_print'
 
 module LinterRules
-  # rubocop:disable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Style/MultipleComparison
   def linter(content)
     arr = content.string.split('')
     err_arr = []
     line_counter = 1
     arr.each_with_index do |v, i|
       line_counter += 1 if v == "\n"
-      if v == '{' || v == '}'
+      if v.include?('{') || v.include?('}')
         err_arr << err_msg(0, line_counter, v, 'bf', 'spc') if arr[i - 1] != ' ' && v == '{'
         err_arr << err_msg(0, line_counter, v, 'af', 'nl') if arr[i + 1] != "\n" && v == '{'
         err_arr << err_msg(0, line_counter, v, 'bf', 'nl') if arr[i - 1] != "\n" && v == '}'
         err_arr << err_msg(0, line_counter, v, 'af', 'nl') if arr[i + 1] != "\n" and v == '}'
-      elsif v == '(' || v == ')'
+      elsif v.include?('(') || v.include?(')')
         if (arr[i - 1] == ' ' && v == '(') || (arr[i + 1] == ' ' && v == '(')
           err_arr << err_msg(1, line_counter, v, 'surr')
         end
@@ -56,5 +56,4 @@ module LinterRules
     end
   end
 end
-
-# rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity, Style/MultipleComparison
+# rubocop:enable Metrics/AbcSize, Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
