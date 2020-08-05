@@ -140,9 +140,9 @@ To test out **CSS Linter** you need to:
   ```
 * Navigate to root directory of the repo and run:
 ```
-$ bin/main <!-- to run the script, it will ask you for the name of the file to check, leave it empty if you want the program to use the sample.css included in this project. -->
+$ bin/main
 
-Provide a file to check, otherwise the sample.css will be used: path_to_file.css <!-- (path_to_file being the file you want to check for linters) -->
+Provide a file to check, otherwise the sample.css will be used: path_to_file.css <!-- (path_to_file.css being the file you want to check for linters, leave blank and click enter if you want to use the default file included) -->
 
 ```
 ![Screenshot](images/test_run.png)

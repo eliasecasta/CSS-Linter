@@ -1,3 +1,4 @@
+# rubocop:disable Lint/UselessAssignment
 class FileLoader
   attr_reader :content, :file_path
 
@@ -11,3 +12,4 @@ class FileLoader
     content = StringScanner.new(read_file)
   end
 end
+# rubocop:enable Lint/UselessAssignment
