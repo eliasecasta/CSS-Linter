@@ -1,4 +1,4 @@
-# rubocop:disable Layout/EndOfLine
+# rubocop:disable Lint/RedundantCopDisableDirective, Layout/EndOfLine
 gem 'awesome_print'
 gem 'strscan'
-# rubocop:enable Layout/EndOfLine
+# rubocop:enable Lint/RedundantCopDisableDirective, Layout/EndOfLine
