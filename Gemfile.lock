@@ -4,7 +4,7 @@ GEM
     strscan (1.0.3)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   awesome_print
