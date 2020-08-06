@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+# rubocop:disable Style/MixinUsage
+require_relative '../lib/file_loader.rb'
+require_relative '../lib/linter_rules.rb'
+
+include LinterRules
+
+print 'Provide a file to check, otherwise the sample.css will be used: '
+
+file_to_open = gets.chomp
+
+file_to_open = './sample.css' if file_to_open.empty?
+file = FileLoader.new(file_to_open)
+
+linter(file.content)
+
+# rubocop:enable Style/MixinUsage
